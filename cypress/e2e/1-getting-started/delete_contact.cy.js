@@ -24,7 +24,7 @@ describe('update contact', () => {
           cy.url().should('include', 'https://staging.iammerlin.co/consultant/clients');
     })
 
-    it('delete contact success', () => {
+    it('cancel delete contact', () => {
         cy.get('tbody>tr').eq(1).click();
         cy.wait(500);
         cy.get('.navbar-nav > .nav-item').last().click();
