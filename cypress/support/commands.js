@@ -23,6 +23,7 @@ Cypress.Commands.add('login', (email, password) => {
 Cypress.Commands.add('contact', () => {
     cy.get('#clients-sidenav-icon').click();
     cy.url().should('include', 'https://staging.iammerlin.co/consultant/all_people');
+    cy.wait(1000);
 })
 //
 // -- This is a child command --

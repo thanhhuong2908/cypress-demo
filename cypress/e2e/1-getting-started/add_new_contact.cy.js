@@ -22,11 +22,6 @@ describe('add new contact', () => {
         cy.get('.alert').should('have.text', 'Created client successfully');
         // Back to Contact List
         cy.get('.back-link > a').contains('Back to Contact List').click();
-        // // Edit Contact
-        // cy.get('.table').contains('selina.cypressdemo1678901192086@mailinator.com').click();
-        // cy.get('.navbar-nav > .nav-item').last().click();
-        // cy.get('#open-biodata-form').click();
-        // cy.get('#biodata-form input[type=submit]').click();
     })
 
     it('First Name is blank', () => {
