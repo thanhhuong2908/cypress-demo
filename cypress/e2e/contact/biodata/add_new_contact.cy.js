@@ -2,7 +2,7 @@
 
 //import { contains } from "cypress/types/jquery";
 
-describe('add new contact', () => {
+describe('write all cases for add new contact', () => {
 
     beforeEach('', () => {
         cy.login('tester.go2019@gmail.com', '12345Admin!');
@@ -24,7 +24,7 @@ describe('add new contact', () => {
         cy.get('.back-link > a').contains('Back to Contact List').click();
     })
 
-    it('First Name is blank', () => {
+    it('add new contact with First Name is blank', () => {
         cy.get('#open-new-contract').click();
         cy.get('.action').contains('Save Contact').click();
         cy.get('#first-name-input + .invalid-feedback').should('have.text', 'This is a compulsory field');
@@ -37,7 +37,7 @@ describe('add new contact', () => {
         cy.get('#dob ~ .invalid-feedback').should('have.text', 'This is a compulsory field');
     })
 
-    it('Email is blank', () => {
+    it('add new contact with Email is blank', () => {
         cy.get('#open-new-contract').click();
         cy.get('#first-name-input').type('Selina Demo Cypress');
         cy.get('#dob + input').type('29/08/1997');
@@ -46,7 +46,7 @@ describe('add new contact', () => {
         cy.get('#email-input + .invalid-feedback').should('have.text', 'Email has already been taken or User already exist and is tagged under someone else');
     })
 
-    it('Phone is blank', () => {
+    it('add new contact with Phone is blank', () => {
         cy.get('#open-new-contract').click();
         cy.get('#first-name-input').type('Selina Demo Cypress');
         cy.get('#dob + input').type('29/08/1997');

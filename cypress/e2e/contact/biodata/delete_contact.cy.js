@@ -2,7 +2,7 @@
 
 //const cypress = require("cypress");
 
-describe('update contact', () => {
+describe('write all cases for delete contact', () => {
 
     beforeEach('', () => {
         cy.login('tester.go2019@gmail.com', '12345Admin!');

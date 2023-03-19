@@ -1,13 +1,13 @@
 /// <reference types="cypress" />
 
-describe('update contact', () => {
+describe('write all cases for update contact', () => {
 
     beforeEach('', () => {
         cy.login('tester.go2019@gmail.com', '12345Admin!');
         cy.contact();
     })
 
-    it('edit contact success', () => {
+    it('update contact success', () => {
         cy.get('tbody>tr').eq(1).click();
         cy.wait(500);
         cy.get('.navbar-nav > .nav-item').last().click();
@@ -18,7 +18,7 @@ describe('update contact', () => {
         cy.get('.page-content > .alert').should('have.text', 'Updated client successfully');
     })
 
-    it('edit contact with first name is blank', () => {
+    it('update contact with first name is blank', () => {
         cy.get('tbody>tr').eq(1).click();
         cy.get('.navbar-nav > .nav-item').last().click();
         cy.get('#open-biodata-form').click();
