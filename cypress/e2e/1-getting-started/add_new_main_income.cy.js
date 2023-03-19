@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('add new income', () => {
+describe('write all cases for add new main income', () => {
 
     beforeEach('', () => {
         cy.login('tester.go2019@gmail.com', '12345Admin!');
@@ -61,7 +61,7 @@ describe('add new income', () => {
         cy.get('#income_company_name + .invalid-feedback').should('have.text', 'This is a compulsory field');
     })
 
-    it.only('add new income with Interval Type is blank', () => {
+    it('add new income with Interval Type is blank', () => {
         cy.get('tbody>tr').eq(1).click();
         cy.wait(1000);
         cy.get('.navbar-nav > .nav-item').contains('Cashflow').click();
